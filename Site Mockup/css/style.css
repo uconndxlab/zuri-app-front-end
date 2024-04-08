@@ -183,6 +183,13 @@ section {
     padding-top: 40px;
 }
 
+.card-sect {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .card-yellow {
     background-color: #F6A723CC;
     color: white;
