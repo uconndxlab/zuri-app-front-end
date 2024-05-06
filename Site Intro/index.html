@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Intro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yvl7cdi.css">
+</head>
+<body>
+    <section class="load-page">
+        <img src="images/placeholder.jpg" alt="">
+        <img src="images/placeholder.jpg" alt="">
+    </section>
+
+    <section class="welcome-page">
+        <h2 class="quicksand-500">Welcome to Zuri, <span class="quicksand-700">Sexual Self Efficacy</span> Learning App!</h2>
+        <p class="quicksand-400">Sexual self-efficacy is the ability to see yourself as a person whoh can make your own decisions about what happens to you sexually.</p>
+        <button class="button quicksand-500 btn-red btn-small" id="cont-btn">Continue</button>
+    </section>
+    <section class="transition-cont">
+        <div class="button quicksand-500 btn-red btn-small" id="transition-btn">
+
+        </div>
+    </section>   
+    <section class="sign-page">
+        <section>
+            <img src="images/placeholder.jpg" alt="">
+            <img src="images/placeholder.jpg" alt="">
+        </section>
+        <div class="sign-card">
+            <p class="quicksand-500">Let's start to learn and play together!</p>
+            <div>
+                <button class="button quicksand-500 btn-white btn-small">Sign In</button>
+                <button class="button quicksand-500 btn-white btn-small">Sign Up</button>                
+            </div>
+
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        let loadPage = document.querySelector(".load-page")
+        let welcomePage = document.querySelector(".welcome-page")
+        let contBtn = document.querySelector("#cont-btn")
+        let signPage = document.querySelector(".sign-page")
+        let transitionBtn = document.querySelector("#transition-btn")
+
+        setTimeout(function() {
+            loadPage.style.opacity = "0"
+            setTimeout(function() {
+                 loadPage.style.display = "none"
+                 loadPage.style.zIndex = "-4"
+                 welcomePage.style.zIndex = "3"
+            }, 500)
+        }, 2000)
+
+        contBtn.addEventListener("click", function() {
+            transitionBtn.style.width= "100%"
+            transitionBtn.style.height= "100%"
+            transitionBtn.style.paddingTop= "57.6vh"
+            transitionBtn.style.borderRadius = "60px 60px 0px 0px"
+            welcomePage.style.opacity = "0"
+            signPage.style.opacity = "1"
+            setTimeout(function() {
+                welcomePage.style.display = "none"
+            }, 500)
+        })
+        })
+
+    </script>
+</body>
+</html>
