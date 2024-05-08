@@ -9,6 +9,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: white;
+    transition: all .3s ease;
 }
 
 
@@ -164,6 +166,117 @@ body {
             font-size: 1.1em;
             cursor: pointer;
         }
+    }
+}
+
+.sign-in-page {
+    position: absolute;
+    z-index: 5;
+    padding: 0 60px;
+    display: none;
+    align-self: flex-end;
+    padding-top: 40vh;
+    opacity: 0;
+    transition: all .3s ease;
+
+    h1 {
+        color: #ca445d;
+        font-size: 1.8em;
+        margin-bottom: 35px;
+    }
+
+    form {
+        display: grid;
+        width: 100%;
+
+        .sign-in-input {
+            font-size: 1em;
+            border: none;
+            border-bottom: 1px solid #0000002b;
+            height: 35px;
+        }
+
+        .sign-in-input::placeholder {
+            color: #00000048;
+        }
+
+        #sign-in-usr {
+            margin-bottom: 10px;
+        }
+
+        #sign-in-pass {
+            margin-bottom: 20px;
+        }
+
+        #sign-in-submit {
+            justify-self: center;
+            font-size: 1.1em;
+            width: 150px;
+            margin-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #909090;
+            margin-bottom: 15px;
+        }
+    }
+
+    .sign-links {
+        justify-self: center;
+        color: #909090;
+        margin-top: 20px;
+    }
+}
+
+.sign-up-page {
+    position: absolute;
+    z-index: 1000;
+    padding: 0 60px;
+    display: none;
+    align-self: flex-end;
+    padding-top: 40vh;
+    opacity: 0;
+    transition: all .3s ease;
+
+    h1 {
+        color: #ca445d;
+        font-size: 1.8em;
+        margin-bottom: 70px;
+    }
+
+    .cont-btn {
+        background-color: #efefef;
+        border: none;
+        color: #909090;
+        display: grid;
+        grid-template-rows: 1fr;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        
+        p {
+            grid-row: 1;
+            justify-self: flex-start;
+            align-self: center;
+            font-size: 1.3em;
+            padding-top: 5px;
+            margin: 0;
+        }
+        svg {
+            height: 22px;
+            fill: #ca445d;
+            grid-row: 1;
+            justify-self: flex-end;
+            align-self: center;
+        }
+    }
+
+    .sign-links {
+        justify-self: center;
+        color: #909090;
+        margin-top: 40px;
     }
 }
 
