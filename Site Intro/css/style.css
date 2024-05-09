@@ -2,6 +2,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -9,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     background-color: white;
     transition: all .3s ease;
 }
@@ -170,6 +172,8 @@ body {
 }
 
 .sign-in-page {
+    box-sizing: border-box;
+    width: 100%;
     position: absolute;
     z-index: 5;
     padding: 0 60px;
@@ -230,11 +234,14 @@ body {
 }
 
 .sign-up-page {
+    box-sizing: border-box;
     position: absolute;
     z-index: 1000;
     padding: 0 60px;
+    width: 100%;
     display: none;
     align-self: flex-end;
+    justify-self: center;
     padding-top: 40vh;
     opacity: 0;
     transition: all .3s ease;
@@ -243,6 +250,7 @@ body {
         color: #ca445d;
         font-size: 1.8em;
         margin-bottom: 70px;
+        width: 100%;
     }
 
     .cont-btn {
