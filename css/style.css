@@ -82,6 +82,13 @@ section {
     margin: 0;
 }
 
+.quicksand-body{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+}
+
 .sub-title {
     margin-top: 15px;
 }
@@ -230,6 +237,10 @@ section {
     background-color: transparent;
 }
 
+.outline-card:hover{
+    cursor:pointer!important;
+}
+
 .card-img {
     width: 180px;
 }
@@ -277,6 +288,10 @@ section {
     overflow: hidden;
 }
 
+.scroll-card:hover{
+    cursor:pointer;
+}
+
 .scroll-heading {
     padding: 10px 10px 10px 10px;
     width: 100%;
@@ -285,8 +300,44 @@ section {
 }
 
 
+/* ============= */
+/* PAGE LAYOUTS ===== */
+/* ============= */
 
+.flex-container{
+    display:flex;
+    padding:35px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
 
+.flex-container .outline-div{
+    width:48%;
+}
+
+.flex-container .outline-div .outline-card{
+    height:100%;
+}
+
+.flex-container img{
+    width:100%;
+    max-width:400px;
+}
+
+/* ============= */
+/* CARDS ===== */
+/* ============= */
+.definition-card{
+    background:#F6A723;
+    padding:20px;
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.definition-card:hover{
+    cursor:pointer;
+}
 
 /* ============= */
 /* TOP NAV ===== */
@@ -319,9 +370,6 @@ section {
     display: flex;
     gap: 10px;
 }
-
-
-
 
 
 /* ============= */
@@ -369,3 +417,8 @@ nav {
     width: 40px;
     height: 40px;
 }
+
+.nav-element:hover{
+    cursor:pointer;
+}
+
