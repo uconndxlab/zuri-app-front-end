@@ -266,6 +266,7 @@ body {
         
         p {
             grid-row: 1;
+            pointer-events: none;
             justify-self: flex-start;
             align-self: center;
             font-size: 1.3em;
@@ -274,6 +275,7 @@ body {
         }
         svg {
             height: 22px;
+            pointer-events: none;
             fill: #ca445d;
             grid-row: 1;
             justify-self: flex-end;
@@ -285,6 +287,47 @@ body {
         justify-self: center;
         color: #909090;
         margin-top: 40px;
+    }
+}
+
+.hello-page {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+    padding: 0 60px;
+    width: 100%;
+    display: none;
+    padding: 80px 0;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    height: 100%;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-self: center;
+    opacity: 0;
+    transition: all .3s ease;
+    img {
+        width: 300px;
+        justify-self: center;
+        align-self: flex-end;
+    }
+    h1 {
+        color: white;
+        font-size: 2.2em;
+        justify-self: center;
+        align-self: center;
+    }
+    button {
+        color: #909090;
+        font-size: 1.2em;
+        width: 300px;
+        justify-self: center;
+        align-self: flex-start;
+    }
+    a {
+        color: white;
+        justify-self: center;
+        font-size: 1.2em;
+        align-self: center;
     }
 }
 

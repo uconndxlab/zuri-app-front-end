@@ -39,7 +39,7 @@
     </section>
     <section class="sign-in-page">
         <h1 class="quicksand-700">Sign In</h1>
-        <form action="">
+        <form action="" id="sign-in-form">
             <input type="text" name="username" id="sign-in-usr" placeholder="User Name" class="sign-in-input quicksand-700">
             <input type="password" name="password" id="sign-in-pass" placeholder="Password" class="sign-in-input quicksand-700" >
             <a href="" class="quicksand-700">Use Face ID</a>
@@ -64,6 +64,12 @@
         </button>   
         <a href="#" class="sign-links quicksand-500" id="to-sign-in">Already Have an Account? Sign In!</a>
     </section>
+    <section class="hello-page">
+        <img src="images/placeholder.jpg" alt="">
+        <h1 class="quicksand-700">Hello User!</h1>
+        <button class="button quicksand-500 btn-white btn-big" id="hello-btn">Let's Complete Your Profile</button>
+        <a href="#" class="quicksand-500">Skip For Now</a>
+    </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
         let loadPage = document.querySelector(".load-page")
@@ -71,6 +77,7 @@
         let contBtn = document.querySelector("#cont-btn")
         let signPage = document.querySelector(".sign-page")
         let transitionBtn = document.querySelector("#transition-btn")
+        let transitionCont = document.querySelector(".transition-cont")
         let signInBtn = document.querySelector("#sign-in-btn")
         let signUpBtn = document.querySelector("#sign-up-btn")
         let pageHTML = document.querySelector("body")
@@ -78,6 +85,8 @@
         let signUpPage = document.querySelector(".sign-up-page")
         let toSignUp = document.querySelector("#to-sign-up")
         let toSignIn = document.querySelector("#to-sign-in")
+        let signInForm = document.querySelector("#sign-in-form")
+        let helloPage = document.querySelector(".hello-page")
 
         setTimeout(function() {
             loadPage.style.opacity = "0"
@@ -147,6 +156,29 @@
                 signUpPage.style.display = "none"
                 signInPage.style.opacity = "1"
             }, 250)
+        })
+
+        signInForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            signInPage.style.opacity = "0"
+            transitionBtn.style.opacity = "0"
+            helloPage.style.display = "grid"
+            setTimeout(function() {
+                signInPage.style.display = "none"
+                helloPage.style.opacity = "1"
+            }, 250);
+        })
+
+        signUpPage.addEventListener("click", function(event) {
+            if (event.target.tagName === 'BUTTON') {
+                signUpPage.style.opacity = "0"
+                transitionBtn.style.opacity = "0"
+                helloPage.style.display = "grid"
+                setTimeout(function() {
+                    signUpPage.style.display = "none"
+                    helloPage.style.opacity = "1"
+                }, 250)
+            }
         })
 
         })
