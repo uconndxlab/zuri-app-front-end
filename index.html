@@ -67,7 +67,26 @@
     <section class="hello-page">
         <img src="images/placeholder.jpg" alt="">
         <h1 class="quicksand-700">Hello User!</h1>
-        <button class="button quicksand-500 btn-white btn-big" id="hello-btn">Let's Complete Your Profile</button>
+        <button class="button quicksand-500 btn-white btn-big hello-btn">Let's Complete Your Profile</button>
+        <a href="#" class="quicksand-500">Skip For Now</a>
+    </section>
+    <section class="profile-page">
+        <img src="images/placeholder.jpg" alt="">
+        <div id="profile-text">
+            <p class="quicksand-500">Add Profile Image</p>
+            <p class="quicksand-500">Or</p>
+            <p class="quicksand-500">Choose an Avatar</p>    
+        </div>
+        <div id="profile-avatars">
+            <div>
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+        </div>
+        <form action="" id="name-form">
+            <input type="text" id="nickname">
+            <p class="quicksand-500">This is the name people will see</p>
+            <input type="submit" class="submit-name" value="Next" class="button quicksand-500 btn-white btn-small" style="color: #909090;">
+        </form>
         <a href="#" class="quicksand-500">Skip For Now</a>
     </section>
     <script>
@@ -87,6 +106,8 @@
         let toSignIn = document.querySelector("#to-sign-in")
         let signInForm = document.querySelector("#sign-in-form")
         let helloPage = document.querySelector(".hello-page")
+        let helloBtn = document.querySelector(".hello-btn")
+        let profilePage = document.querySelector(".profile-page")
 
         setTimeout(function() {
             loadPage.style.opacity = "0"
@@ -179,6 +200,15 @@
                     helloPage.style.opacity = "1"
                 }, 250)
             }
+        })
+
+        helloBtn.addEventListener("click", function(event) {
+            helloPage.style.opacity = "0"
+            profilePage.style.display = "grid"
+            setTimeout(function() {
+                helloPage.style.display = "none"
+                profilePage.style.opacity = "1"
+            }, 250);
         })
 
         })
