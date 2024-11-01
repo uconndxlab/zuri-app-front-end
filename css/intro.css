@@ -336,12 +336,11 @@ body {
     z-index: 1000;
     width: 100%;
     display: none;
-    padding: 80px 60px;
-    grid-template-rows: 1fr 1fr min-content 3fr 1fr;
+    padding: 150px 60px 100px 60px;
+    grid-template-rows: 1fr 1.5fr min-content 1fr 1fr;
     height: 100%;
     flex-direction: column;
-    align-self: flex-end;
-    justify-self: center;
+    justify-items: center;
     opacity: 0;
     transition: all .3s ease;
     img {
@@ -351,13 +350,32 @@ body {
     #profile-text {
         color: white;
         font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        padding-top: 10px;
+        p {
+            margin: 0;
+            padding: 5px;
+            font-size: 0.8em;
+        }
     }
     #profile-avatars {
         display: flex;
-        gap: 20px;
+        gap: 9px;
         div {
+            background-color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
             img {
-                width: 40px;
+                width: 28px;
+                height: 28px;
             }
             /* background-color: white;
             width: 10px;
@@ -368,9 +386,19 @@ body {
     #name-form {
         display: grid;
         grid-template-rows: 1fr 3fr 1fr;
+        #nickname {
+            border: none;
+            border-radius: 8px;
+            height: 55px;
+            font-size: 1.2em;
+            padding-left: 20px;
+        }
         p {
             color: white;
             font-size: 1.2em;
+            text-align: start;
+            padding-top: 8px;
+            margin: 0;
         }
         .submit-name {
             justify-self: center;
@@ -391,7 +419,113 @@ body {
 
 }
 
+.privacy-page {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+    padding: 150px 60px 100px 60px;
+    grid-template-rows: 1fr 1fr 2fr 3fr;
+    height: 100%;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .3s ease;
+    h1 {
+        text-align: start;
+        align-self: end;
+        color: white;
+        font-size: 2em;
+    }
+    p {
+        text-align: start;
+        align-self: end;
+        padding-bottom: 10px;
+        color: white;
+        font-size: 1.2em;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        button {
+            width: 100%;
+            height: 60px;
+            font-size: 1.2em;
+            margin: 0;
+        }
+    }
+    a {
+        color: white;
+        justify-self: center;
+        font-size: 1.2em;
+        align-self: center;
+    }
+}
 
+.light-page {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+    padding: 100px 60px;
+    grid-template-rows: 2fr 1fr 2fr 3fr;
+    height: 100%;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .3s ease;
+    h1 {
+        text-align: start;
+        align-self: end;
+        color: white;
+        font-size: 1.9em;
+    }
+    p {
+        text-align: start;
+        align-self: start;
+        padding-top: 10px;
+        color: white;
+        font-size: 1.2em;
+    }
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        .light-btn {
+            border: none;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            background-color: white;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            h2 {
+                color: black;
+            }
+        }
+        .dark-btn {
+            border: none;
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            background-color: black;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            h2 {
+                color: white;
+            }
+        }
+    }
+    a {
+        color: white;
+        justify-self: center;
+        font-size: 1.2em;
+        align-self: center;
+    }
+}
 
 
 

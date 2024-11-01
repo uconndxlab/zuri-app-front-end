@@ -81,12 +81,48 @@
             <div>
                 <img src="images/placeholder.jpg" alt="">
             </div>
+            <div>
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/placeholder.jpg" alt="">
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: #909090; height: 28px; width: 28px;">
+                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                </svg>
+            </div>
         </div>
         <form action="" id="name-form">
-            <input type="text" id="nickname">
+            <input type="text" id="nickname" placeholder="Nickname">
             <p class="quicksand-500">This is the name people will see</p>
             <input type="submit" class="submit-name" value="Next" class="button quicksand-500 btn-white btn-small" style="color: #909090;">
         </form>
+        <a href="#" class="quicksand-500">Skip For Now</a>
+    </section>
+    <section class="privacy-page">
+        <h1 class="quicksand-700">Privacy Setting</h1>
+        <p class="quicksand-500">Choose how you want to log in:</p>
+        <div>
+            <button class="button quicksand-500 btn-white btn-small" style="color: #909090;">Face ID</button>
+            <button class="button quicksand-500 btn-white btn-small" style="color: #909090;">Touch ID</button>
+            <button class="button quicksand-500 btn-white btn-small" style="color: #909090;">Passcode</button>
+        </div>
+        <a href="#" class="quicksand-500">Skip For Now</a>
+    </section>
+    <section class="light-page">
+        <h1 class="quicksand-700">Light or Dark Mode?</h1>
+        <p class="quicksand-400">Can be changed later in settings</p>
+        <div>
+            <button class="light-btn"><h2 class="quicksand-500">Light</h2></button>
+            <button class="dark-btn"><h2 class="quicksand-500">Dark</h2></button>
+        </div>
         <a href="#" class="quicksand-500">Skip For Now</a>
     </section>
     <script>
@@ -108,6 +144,9 @@
         let helloPage = document.querySelector(".hello-page")
         let helloBtn = document.querySelector(".hello-btn")
         let profilePage = document.querySelector(".profile-page")
+        let nameBtn = document.querySelector(".submit-name")
+        let privacyPage = document.querySelector(".privacy-page")
+        let lightPage = document.querySelector(".light-page")
 
         setTimeout(function() {
             loadPage.style.opacity = "0"
@@ -209,6 +248,27 @@
                 helloPage.style.display = "none"
                 profilePage.style.opacity = "1"
             }, 250);
+        })
+
+        nameBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            profilePage.style.opacity = "0"
+            privacyPage.style.display = "grid"
+            setTimeout(function() {
+                profilePage.style.display = "none"
+                privacyPage.style.opacity = "1"
+            }, 250);
+        })
+
+        privacyPage.addEventListener("click", function(event) {
+            if (event.target.tagName === 'BUTTON') {
+                privacyPage.style.opacity = "0"
+                lightPage.style.display = "grid";
+                setTimeout(function() {
+                    privacyPage.style.display = "none"
+                    lightPage.style.opacity = "1"
+                }, 250)
+            }
         })
 
         })
