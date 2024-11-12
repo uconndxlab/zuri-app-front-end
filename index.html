@@ -125,6 +125,36 @@
         </div>
         <a href="#" class="quicksand-500">Skip For Now</a>
     </section>
+    <section class="card-page">
+        <button class="quicksand-500" style="align-self: start;">Skip</button>
+        <div class="tracking-card active-card" id="tracking1">
+            <img src="images/placeholder.jpg" alt="">
+            <h1 class="quicksand-500">Track your health</h1>
+            <p class="quicksand-400">We made it easy to track your daily mood, protection style and set reminders for them.</p>
+        </div>
+        <div class="tracking-card" id="tracking2">
+            <img src="images/placeholder.jpg" alt="">
+            <h1 class="quicksand-500">Chat with Zuri</h1>
+            <p class="quicksand-400">Zuri, your best friend, is always ready to answer all your questions about safe sex without judging!</p>
+        </div>
+        <div class="tracking-card" id="tracking3">
+            <img src="images/placeholder.jpg" alt="">
+            <h1 class="quicksand-500">Learn with Zuri</h1>
+            <p class="quicksand-400">Zuri will help you learn about different topic related to safe sex and birth control.</p>
+        </div>
+        <div class="tracking-card" id="tracking4">
+            <img src="images/placeholder.jpg" alt="">
+            <h1 class="quicksand-500">Play with Zuri</h1>
+            <p class="quicksand-400">Zuri will lead you to play games about safe sex.</p>
+        </div>
+        <div class="prog-bar">
+            <div class="prog-div active-div" id="prog1"></div>
+            <div class="prog-div" id="prog2"></div>
+            <div class="prog-div" id="prog3"></div>
+            <div class="prog-div" id="prog4"></div>
+        </div>
+        <button class="quicksand-500" style="align-self: end;" id="card-next">Next</button>
+    </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
         let loadPage = document.querySelector(".load-page")
@@ -147,6 +177,22 @@
         let nameBtn = document.querySelector(".submit-name")
         let privacyPage = document.querySelector(".privacy-page")
         let lightPage = document.querySelector(".light-page")
+        let lightBtn = document.querySelector(".light-btn")
+        let cardPage = document.querySelector(".card-page")
+        let body = document.querySelector("body")
+        let cardNext = document.querySelector("#card-next")
+        let activeDiv = document.querySelector(".active-div")
+        let activeCard = document.querySelector(".active-card")
+
+        let prog1 = document.querySelector("#prog1")
+        let prog2 = document.querySelector("#prog2")
+        let prog3 = document.querySelector("#prog3")
+        let prog4 = document.querySelector("#prog4")
+
+        let tracking1 = document.querySelector("#tracking1")
+        let tracking2 = document.querySelector("#tracking2")
+        let tracking3 = document.querySelector("#tracking3")
+        let tracking4 = document.querySelector("#tracking4")
 
         setTimeout(function() {
             loadPage.style.opacity = "0"
@@ -268,6 +314,49 @@
                     privacyPage.style.display = "none"
                     lightPage.style.opacity = "1"
                 }, 250)
+            }
+        })
+
+        lightBtn.addEventListener("click", function(event) {
+            lightPage.style.opacity = "0"
+            cardPage.style.display = "grid"
+            body.style.backgroundColor = "#FFFFFF"
+            transitionBtn.style.display = "none"
+            transitionCont.style.display = "none"
+            setTimeout(function() {
+                lightPage.style.display = "none"
+                cardPage.style.opacity = "1"
+            }, 250);
+        })
+
+        cardNext.addEventListener("click", function(event){
+            console.log(prog1)
+            if (prog1.classList.contains("active-div")) {
+                prog1.classList.remove("active-div")
+                prog2.classList.add("active-div")
+                tracking1.classList.remove("active-card")
+                tracking1.style.zIndex = "8"
+                tracking2.classList.add("active-card")
+                tracking2.style.zIndex = "10"
+            } else if (prog2.classList.contains("active-div")) {
+                prog2.classList.remove("active-div")
+                prog3.classList.add("active-div")
+                tracking1.style.zIndex = "6"
+                tracking2.classList.remove("active-card")
+                tracking2.style.zIndex = "8"
+                tracking3.classList.add("active-card")
+                tracking3.style.zIndex = "10"
+            } else if (prog3.classList.contains("active-div")) {
+                prog3.classList.remove("active-div")
+                prog4.classList.add("active-div")
+                tracking1.style.zIndex = "4"
+                tracking2.style.zIndex = "6"
+                tracking3.classList.remove("active-card")
+                tracking3.style.zIndex = "8"
+                tracking4.classList.add("active-card")
+                tracking4.style.zIndex = "10"
+            } else {
+                window.location.href= "main.html";
             }
         })
 
