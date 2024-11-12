@@ -10,6 +10,10 @@ body {
     padding-bottom: 100px;
 }
 
+
+
+
+
 /* ============= */
 /* TEMP ======= */
 /* ============= */
@@ -30,8 +34,8 @@ section {
     margin: 0;
 }
 
-section:last-of-type{
-    margin-bottom:50px;
+.content {
+    padding-left: 35px;
 }
 
 .coin-img {
@@ -55,6 +59,10 @@ section:last-of-type{
     gap: 10px;
 }
 
+
+
+
+
 /* ============= */
 /* FONTS ======= */
 /* ============= */
@@ -72,13 +80,6 @@ section:last-of-type{
     font-weight: 600;
     font-style: normal;
     margin: 0;
-}
-
-.quicksand-body{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    font-style: normal;
 }
 
 .sub-title {
@@ -229,10 +230,6 @@ section:last-of-type{
     background-color: transparent;
 }
 
-.outline-card:hover{
-    cursor:pointer!important;
-}
-
 .card-img {
     width: 180px;
 }
@@ -252,11 +249,6 @@ section:last-of-type{
 /* ============= */
 /* SLIDESHOW === */
 /* ============= */
-
-.container:has(.scroll-wrap){
-    padding-right:0px;
-    
-}
 
 .scroll-wrap {
     height: 190px;
@@ -285,10 +277,6 @@ section:last-of-type{
     overflow: hidden;
 }
 
-.scroll-card:hover{
-    cursor:pointer;
-}
-
 .scroll-heading {
     padding: 10px 10px 10px 10px;
     width: 100%;
@@ -296,20 +284,9 @@ section:last-of-type{
     color: rgb(144, 144, 144);
 }
 
-/* ============= */
-/* CARDS ===== */
-/* ============= */
-.definition-card{
-    background:#F6A723;
-    padding:20px;
-    width:100%;
-    border-radius:20px;
-    margin-bottom:20px;
-}
 
-.definition-card:hover{
-    cursor:pointer;
-}
+
+
 
 /* ============= */
 /* TOP NAV ===== */
@@ -323,30 +300,43 @@ section:last-of-type{
     padding: 20px;
 }
 
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+}
+
 .top-profile {
     color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
+.top-search {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
 
 /* ============= */
 /* BOTTOM NAV == */
 /* ============= */
 
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100px;
-    background-color: white;
-    -webkit-box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
-    box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
-    position: fixed;
-    bottom: 0;
-    width:100%;
 }
 
 .nav-bar {
-    padding-left:0px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -356,6 +346,14 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
+    box-shadow: 0px -4px 9px -4px rgba(0,0,0,0.25);
 }
 
 .nav-element {
@@ -371,8 +369,3 @@ nav {
     width: 40px;
     height: 40px;
 }
-
-.nav-element:hover{
-    cursor:pointer;
-}
-
